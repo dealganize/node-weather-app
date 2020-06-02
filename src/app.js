@@ -36,7 +36,9 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    helpText: 'This is some helpful text.',
+    helpText:
+      'Feel free to contact me on my LinkedIn: ' +
+      'https://www.linkedin.com/in/johnmdrogers/',
     title: 'Help',
     name: 'John Rogers',
   });

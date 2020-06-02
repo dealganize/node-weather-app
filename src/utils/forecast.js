@@ -15,11 +15,17 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        ' It is currently ' +
+        ' Local time: ' +
+          body.location.localtime +
+          '.' +
+          ' It is currently ' +
           body.current.temperature +
           ' degrees out. There is a ' +
           body.current.precip +
-          '% chance of rain.'
+          '% chance of rain.' +
+          ' Wind speed: ' +
+          body.current.wind_speed +
+          'mph'
       );
     }
   });
